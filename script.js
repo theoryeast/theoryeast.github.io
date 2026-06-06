@@ -6,7 +6,7 @@ const year = document.querySelector("#year");
 year.textContent = new Date().getFullYear();
 
 const updateHeader = () => {
-  header.classList.toggle("scrolled", window.scrollY > 20);
+  header.classList.toggle("scrolled", window.scrollY > 8);
 };
 
 updateHeader();
@@ -24,6 +24,19 @@ navLinks.addEventListener("click", (event) => {
   }
 });
 
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".nav") && navLinks.classList.contains("open")) {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+});
+
+const revealElements = [...document.querySelectorAll(".reveal")];
+revealElements.forEach((element, index) => {
+  const groupIndex = index % 4;
+  element.style.setProperty("--reveal-delay", `${groupIndex * 45}ms`);
+});
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -33,7 +46,10 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.12 }
+  {
+    rootMargin: "0px 0px -7% 0px",
+    threshold: 0.08,
+  }
 );
 
-document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+revealElements.forEach((element) => revealObserver.observe(element));
