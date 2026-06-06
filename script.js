@@ -31,6 +31,34 @@ document.addEventListener("click", (event) => {
   }
 });
 
+const publicationTabs = [...document.querySelectorAll("[data-publication-target]")];
+const publicationPanels = [...document.querySelectorAll(".publication-panel")];
+
+const selectPublicationView = (selectedTab) => {
+  publicationTabs.forEach((tab) => {
+    const isSelected = tab === selectedTab;
+    tab.classList.toggle("active", isSelected);
+    tab.setAttribute("aria-selected", String(isSelected));
+    tab.tabIndex = isSelected ? 0 : -1;
+  });
+
+  publicationPanels.forEach((panel) => {
+    panel.hidden = panel.id !== selectedTab.dataset.publicationTarget;
+  });
+};
+
+publicationTabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => selectPublicationView(tab));
+  tab.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+    event.preventDefault();
+    const direction = event.key === "ArrowRight" ? 1 : -1;
+    const nextIndex = (index + direction + publicationTabs.length) % publicationTabs.length;
+    selectPublicationView(publicationTabs[nextIndex]);
+    publicationTabs[nextIndex].focus();
+  });
+});
+
 const revealElements = [...document.querySelectorAll(".reveal")];
 revealElements.forEach((element, index) => {
   const groupIndex = index % 4;

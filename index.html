@@ -64,9 +64,10 @@
         </button>
         <div class="nav-links" id="nav-links">
           <a href="#about">About</a>
+          <a href="#news">News</a>
           <a href="#publications">Publications</a>
           <a href="#research">Research</a>
-          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -105,11 +106,13 @@
 
           <div class="intro-main reveal">
             <p class="section-label">Research Profile</p>
-            <h2>Satellite navigation and intelligent positioning under challenging signal conditions.</h2>
+            <h2>Positioning, attitude measurement, and artificial intelligence for satellite navigation.</h2>
             <p class="intro-text">
-              I develop robust positioning and sensing methods for weak, intermittent, jammed, and
-              time-uncertain satellite-navigation environments. My work combines statistical signal
-              processing, receiver-side algorithms, and artificial intelligence.
+              Rundong Li received the B.S. degree in Communication Engineering from Changsha
+              University, Changsha, China, in 2025. He is currently pursuing the M.S. degree in
+              Electronic and Information Engineering at the same university. His current research
+              interests include positioning and attitude measurement algorithms, as well as
+              artificial intelligence applications in satellite navigation.
             </p>
             <div class="interest-list" aria-label="Research interests">
               <span>Satellite Navigation</span>
@@ -128,19 +131,127 @@
         </div>
       </section>
 
+      <section class="section activity-section" id="news">
+        <div class="container activity-grid">
+          <div>
+            <div class="section-header compact reveal">
+              <div>
+                <p class="section-label">Recent News</p>
+                <h2>Latest updates</h2>
+              </div>
+            </div>
+            <ol class="news-list">
+              <li class="news-item reveal">
+                <time datetime="2026-05">2026.05</time>
+                <p>Our paper on pseudorange filtering under extremely weak signals was published in <em>Measurement Science and Technology</em>.</p>
+              </li>
+              <li class="news-item reveal">
+                <time datetime="2025-12">2025.12</time>
+                <p>Our paper on statistical weighting for discontinuous GNSS signals was published in <em>PLOS ONE</em>.</p>
+              </li>
+              <li class="news-item reveal">
+                <time datetime="2025-09">2025.09</time>
+                <p>Began the M.S. degree in Electronic and Information Engineering at Changsha University.</p>
+              </li>
+              <li class="news-item reveal">
+                <time datetime="2025-05">2025.05</time>
+                <p>Our first-author paper on GEO satellite energy and LSTM-based roll attitude determination was published in <em>Scientific Reports</em>.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div id="experience">
+            <div class="section-header compact reveal">
+              <div>
+                <p class="section-label">Experience</p>
+                <h2>Research experience</h2>
+              </div>
+            </div>
+            <article class="experience-card reveal">
+              <img src="assets/logos/lab.png" alt="BeiDou Navigation Application Technology Research and Development Center logo" width="120" height="120" loading="lazy" decoding="async">
+              <div>
+                <p class="experience-date">2022.03 – Present</p>
+                <h3>BeiDou Navigation Application Technology Research and Development Center</h3>
+                <p>Research on satellite-navigation positioning, attitude measurement, and intelligent algorithms.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section publications-section" id="publications">
         <div class="container">
           <div class="section-header reveal">
             <div>
               <p class="section-label">Publications</p>
-              <h2>Selected publications</h2>
+              <h2>Research publications</h2>
             </div>
             <a class="section-link" href="https://orcid.org/0009-0009-8288-3049" target="_blank" rel="noopener noreferrer">
               Complete record on ORCID <span>↗</span>
             </a>
           </div>
 
-          <ol class="publication-list">
+          <div class="publication-tabs reveal" role="tablist" aria-label="Publication views">
+            <button class="publication-tab active" id="core-tab" type="button" role="tab" aria-selected="true" aria-controls="core-publications" data-publication-target="core-publications">
+              Core Publications <span>3</span>
+            </button>
+            <button class="publication-tab" id="full-tab" type="button" role="tab" aria-selected="false" aria-controls="full-publications" data-publication-target="full-publications">
+              Full Publication List <span>6</span>
+            </button>
+          </div>
+
+          <div class="core-publications publication-panel" id="core-publications" role="tabpanel" aria-labelledby="core-tab">
+            <article class="featured-publication reveal">
+              <a class="paper-figure" href="https://doi.org/10.1088/1361-6501/ae65b6" target="_blank" rel="noopener noreferrer">
+                <img src="assets/papers/weak-signal-positioning.png" alt="Flowchart of the weak-signal positioning method" width="920" height="610" loading="lazy" decoding="async">
+              </a>
+              <div class="featured-paper-content">
+                <div class="paper-meta"><span>2026</span><span>SCI · Open Access</span><span>Measurement Science and Technology</span></div>
+                <h3>A positioning method based on pseudorange filter under extremely weak signals</h3>
+                <p class="paper-authors">Chuanliang Tu, <strong>Rundong Li</strong>, Peng Wu, Shifeng Zhang</p>
+                <p class="paper-summary">Combines a pseudorange dynamic filtering model, weighted Kalman filtering, and assisted positioning to improve availability and accuracy in extremely weak-signal environments.</p>
+                <div class="paper-links">
+                  <a href="https://iopscience.iop.org/article/10.1088/1361-6501/ae65b6/pdf" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+                  <a href="https://doi.org/10.1088/1361-6501/ae65b6" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="featured-publication reveal">
+              <a class="paper-figure" href="https://doi.org/10.1038/s41598-025-01174-0" target="_blank" rel="noopener noreferrer">
+                <img src="assets/papers/roll-attitude-method.png" alt="Overall methodology for GEO satellite energy based roll attitude determination" width="685" height="397" loading="lazy" decoding="async">
+              </a>
+              <div class="featured-paper-content">
+                <div class="paper-meta"><span>2025</span><span>First Author · SCI · Open Access</span><span>Scientific Reports</span></div>
+                <h3>A roll attitude determination method based on the jamming energy of GEO satellites and an LSTM neural network</h3>
+                <p class="paper-authors"><strong>Rundong Li</strong>, Lu Feng, Peng Wu, Xiangling Deng, Haonan Shi</p>
+                <p class="paper-summary">Uses GEO satellite energy patterns and an LSTM model for real-time roll attitude determination, reducing mean self-error by 48.97% over the traditional LS method.</p>
+                <div class="paper-links">
+                  <a href="https://www.nature.com/articles/s41598-025-01174-0.pdf" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+                  <a href="https://doi.org/10.1038/s41598-025-01174-0" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="featured-publication reveal">
+              <a class="paper-figure" href="https://doi.org/10.1016/j.heliyon.2023.e20318" target="_blank" rel="noopener noreferrer">
+                <img src="assets/papers/assisted-gnss.jpg" alt="Algorithm flowchart for one-way fuzzy time assisted GNSS positioning" width="626" height="372" loading="lazy" decoding="async">
+              </a>
+              <div class="featured-paper-content">
+                <div class="paper-meta"><span>2023</span><span>First Author · SCI · Open Access</span><span>Heliyon</span></div>
+                <h3>Assisted-GNSS positioning algorithm based on one-way fuzzy time information</h3>
+                <p class="paper-authors"><strong>Rundong Li</strong>, Peng Wu, Lu Feng, Haibo Tong, Zhipeng Ren</p>
+                <p class="paper-summary">Introduces a one-way fuzzy-time assisted positioning strategy that remains effective under approximate position and time errors without adding substantial computation.</p>
+                <div class="paper-links">
+                  <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10560064/" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+                  <a href="https://doi.org/10.1016/j.heliyon.2023.e20318" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+                </div>
+              </div>
+            </article>
+            <p class="figure-credit reveal">Selected figures: IOP Fig. 1, Scientific Reports Fig. 12, and Heliyon Fig. 2; reproduced without modification from the linked open-access articles.</p>
+          </div>
+
+          <ol class="publication-list publication-panel" id="full-publications" role="tabpanel" aria-labelledby="full-tab" hidden>
             <li class="publication reveal">
               <span class="pub-year">2026</span>
               <div class="pub-content">
@@ -173,7 +284,8 @@
                     A GNSS receiver positioning algorithm based on weighting the statistical properties of discontinuous signals at lower rotation speeds
                   </a>
                 </h3>
-                <p class="venue"><em>PLOS ONE</em> · Journal Article · <a href="https://doi.org/10.1371/journal.pone.0336707" target="_blank" rel="noopener noreferrer">DOI</a></p>
+                <p>Jiahui Gan, Peng Wu, Lu Feng, ZhiChun Dai, <strong>Rundong Li</strong></p>
+                <p class="venue"><em>PLOS ONE</em> · SCI Journal Article · <a href="https://doi.org/10.1371/journal.pone.0336707" target="_blank" rel="noopener noreferrer">DOI</a></p>
               </div>
             </li>
             <li class="publication reveal">
@@ -249,14 +361,20 @@
             </div>
             <div class="timeline">
               <article class="timeline-item reveal">
-                <p class="timeline-date">2025 – Present</p>
-                <h3>M.S., Electronic Information and Electrical Engineering</h3>
-                <p>Changsha University · Changsha, Hunan, China</p>
+                <img class="organization-logo" src="assets/logos/changsha-university.svg" alt="Changsha University logo" width="72" height="72" loading="lazy" decoding="async">
+                <div>
+                  <p class="timeline-date">2025 – Present</p>
+                  <h3>M.S., Electronic and Information Engineering</h3>
+                  <p>Changsha University · Changsha, Hunan, China</p>
+                </div>
               </article>
               <article class="timeline-item reveal">
-                <p class="timeline-date">2021 – 2025</p>
-                <h3>B.S., Electronic Information and Electrical Engineering</h3>
-                <p>Changsha University · Changsha, China</p>
+                <img class="organization-logo" src="assets/logos/changsha-university.svg" alt="" width="72" height="72" loading="lazy" decoding="async">
+                <div>
+                  <p class="timeline-date">2021 – 2025</p>
+                  <h3>B.S., Communication Engineering</h3>
+                  <p>Changsha University · Changsha, China</p>
+                </div>
               </article>
             </div>
           </div>
