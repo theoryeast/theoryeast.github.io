@@ -422,11 +422,15 @@ img {
   margin: 0;
   color: var(--accent);
   font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.intro-news-header h2.section-title-label {
+  font-size: 15px;
 }
 
 .section-summary {
@@ -646,7 +650,7 @@ img {
   gap: 7px 14px;
   margin-bottom: 9px;
   color: var(--accent);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.07em;
   text-transform: uppercase;
