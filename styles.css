@@ -267,6 +267,10 @@ img {
   height: 16px;
 }
 
+.profile-links .scholar-icon {
+  color: #4285f4;
+}
+
 .profile-links svg {
   fill: currentColor;
 }
@@ -434,24 +438,42 @@ img {
 }
 
 .news-list {
+  max-height: 390px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 0;
   margin: 0;
   border-top: 1px solid var(--line-dark);
   list-style: none;
+  scrollbar-color: var(--accent) var(--surface-soft);
+  scrollbar-width: thin;
+}
+
+.news-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-list::-webkit-scrollbar-track {
+  background: var(--surface-soft);
+}
+
+.news-list::-webkit-scrollbar-thumb {
+  background: #9fbed5;
+  border-radius: 999px;
 }
 
 .news-item {
   display: grid;
-  grid-template-columns: 76px 1fr;
-  gap: 16px;
-  padding: 13px 0;
+  grid-template-columns: 86px 1fr;
+  gap: 20px;
+  padding: 16px 8px 16px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .news-item time,
 .experience-date {
   color: var(--accent);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 750;
   letter-spacing: 0.03em;
 }
@@ -459,7 +481,8 @@ img {
 .news-item p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .experience-card {
@@ -551,8 +574,8 @@ img {
 
 .featured-publication {
   display: grid;
-  grid-template-columns: 270px 1fr;
-  gap: 24px;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -568,8 +591,8 @@ img {
 
 .paper-figure {
   display: grid;
-  min-height: 178px;
-  padding: 12px;
+  min-height: 218px;
+  padding: 14px;
   place-items: center;
   background: #f3f6f8;
   border-right: 1px solid var(--line);
@@ -577,23 +600,23 @@ img {
 
 .paper-figure img {
   width: 100%;
-  max-height: 170px;
+  max-height: 210px;
   object-fit: contain;
   mix-blend-mode: multiply;
 }
 
 .featured-paper-content {
   align-self: center;
-  padding: 20px 22px 20px 0;
+  padding: 22px 24px 22px 0;
 }
 
 .paper-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 12px;
-  margin-bottom: 7px;
+  gap: 7px 14px;
+  margin-bottom: 9px;
   color: var(--accent);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -602,7 +625,7 @@ img {
 .featured-paper-content h3 {
   margin: 0;
   font-family: Georgia, "Times New Roman", "Songti SC", serif;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 600;
   line-height: 1.35;
 }
@@ -610,13 +633,13 @@ img {
 .paper-authors {
   margin: 7px 0 0;
   color: var(--ink-soft);
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .paper-summary {
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .paper-links {
@@ -627,7 +650,7 @@ img {
 
 .paper-links a {
   color: var(--accent);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 750;
 }
 
@@ -670,14 +693,14 @@ img {
   padding-top: 2px;
   color: var(--accent);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .pub-content h3 {
   margin: 0;
   font-family: Georgia, "Times New Roman", "Songti SC", serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -693,7 +716,7 @@ img {
 .pub-content p {
   margin: 5px 0 0;
   color: var(--ink-soft);
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .pub-content .venue {
@@ -760,13 +783,17 @@ img {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 52px;
 }
 
 #projects,
 #awards {
   scroll-margin-top: 80px;
+}
+
+#awards .section-header h2 {
+  white-space: nowrap;
 }
 
 .portfolio-card {
@@ -795,7 +822,7 @@ img {
 .award-item {
   display: grid;
   grid-template-columns: 54px 1fr;
-  gap: 16px;
+  gap: 18px;
   align-items: center;
   min-height: 76px;
   padding: 16px 18px;
@@ -812,8 +839,9 @@ img {
 }
 
 .award-item strong {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 650;
+  line-height: 1.45;
 }
 
 .research-section {
@@ -979,6 +1007,7 @@ img {
 .footer-inner a {
   color: var(--accent);
   font-weight: 650;
+  cursor: pointer;
 }
 
 .not-found {
@@ -1185,7 +1214,11 @@ img {
   }
 
   .pub-content h3 {
-    font-size: 17px;
+    font-size: 18px;
+  }
+
+  #awards .section-header h2 {
+    white-space: normal;
   }
 
   .research-card {
@@ -1251,6 +1284,10 @@ img {
     padding: 18px;
   }
 
+  .featured-paper-content h3 {
+    font-size: 20px;
+  }
+
   .footer-inner {
     gap: 8px;
   }
@@ -1289,12 +1326,12 @@ img {
 
   .publication-tab {
     padding-inline: 8px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .news-item {
-    grid-template-columns: 60px 1fr;
-    gap: 10px;
+    grid-template-columns: 68px 1fr;
+    gap: 12px;
   }
 
   .experience-card {

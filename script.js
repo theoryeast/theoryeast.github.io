@@ -2,8 +2,16 @@ const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const year = document.querySelector("#year");
+const backToTop = document.querySelector("#back-to-top");
 
 year.textContent = new Date().getFullYear();
+
+backToTop.addEventListener("click", (event) => {
+  event.preventDefault();
+  history.replaceState(null, "", window.location.pathname + window.location.search);
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  window.setTimeout(() => window.scrollTo({ top: 0, left: 0 }), 350);
+});
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 8);
